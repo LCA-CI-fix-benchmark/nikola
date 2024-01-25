@@ -6,7 +6,7 @@ import pathlib
 import requests
 import socket
 import sys
-from typing import Optional, Tuple, Any
+from typing import Optional, Tuple, Any, Dict
 
 from ..helper import FakeSite
 
@@ -37,7 +37,7 @@ def find_unused_port() -> int:
 
 
 class MyFakeSite(FakeSite):
-    def __init__(self, config: dict[str, Any], configuration_filename="conf.py"):
+    def __init__(self, config: Dict[str, Any], configuration_filename="conf.py"):
         self.configured = True
         self.debug = True
         self.THEMES = []
