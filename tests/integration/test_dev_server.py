@@ -151,6 +151,6 @@ def expected_text():
     For life reload, the server will fiddle with HTML <head>,
     so this only returns everything after the opening <body> tag.
     """
-    with open(OUTPUT_FOLDER / "index.html") as html_file:
+    with open(OUTPUT_FOLDER / "index.html", encoding="utf-8") as html_file:
         all_html = html_file.read()
         return all_html[all_html.find("<body>"):]
